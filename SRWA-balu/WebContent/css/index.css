@@ -1,0 +1,60 @@
+@charset "utf-8";
+/* CSS Document */
+#container{
+	width: 70%;
+	margin:0 auto 0 auto;
+}
+.cHeader{
+	width: 100%;
+}
+ul {
+  text-align: left;
+  display: inline;
+  margin: 0;
+  padding: 15px 4px 17px 0;
+  list-style: none;
+  width: 100%;
+}
+ul li {
+  font: 17px Segoe UI, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+  display: inline-block;
+  margin-right: -4px;
+  position: relative;
+  padding: 15px 5.5%;
+  background: #C4B8C6;
+  cursor: pointer;
+}
+ul li:hover {
+  background: #9A79A1;
+  color: #EDE8EE;
+}
+ul li ul {
+  text-align:center;
+  padding: 0;
+  position: absolute;
+  top: 53px;
+  left: 0;
+  width: 98%;
+  box-shadow: none;
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+}
+ul li ul li { 
+  background: #F69D71; 
+  display: block; 
+  color: #FCF8FC;
+}
+ul li ul li:hover { 
+	background: #F5C8B2;
+	color: #E95003;
+}
+ul li:hover ul {
+  display: block;
+  opacity:1;
+  visibility: visible;
+}
+.mainLinkName{
+	text-decoration:none;
+	color:inherit;
+}

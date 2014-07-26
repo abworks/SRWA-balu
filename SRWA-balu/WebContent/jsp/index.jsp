@@ -4,33 +4,50 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Home :: Examination Module</title>
-<link rel="stylesheet" type="text/css" href="<%= request.getContextPath() %>/css/commons.css">
+<title>Home</title>
+<link rel="stylesheet" href="<%=request.getContextPath() %>/css/index.css" type="text/css" />
 </head>
-<body>
-	<div class="container">
-		<div class="header" >
-			<div class="logo">
-			<img src="<%=request.getContextPath() %>/icons/logo.png" alt="logo">
-			</div>
-			<div class="nav">
-				<table id="navtable" cellspacing="0" cellpadding="0">
-					<tr>
-						<td class="navbuttons" align="center"><button class="blockLink" onclick="location.href='<%=request.getContextPath()%>/jsp/index.jsp'">Home</button></td>
-						<td class="navbuttons" align="center"><button class="blockLink" onclick="location.href='<%=request.getContextPath()%>/jsp/student.jsp'">Student</button></td>
-						<td class="navbuttons" align="center"><button class="blockLink" onclick="location.href='<%=request.getContextPath()%>/jsp/exam.jsp'">Examinations</button></td>
-						<td class="navbuttons" align="center"><button class="blockLink" onclick="location.href='<%=request.getContextPath()%>/jsp/leader.jsp'">Leader Board</button></td>
-						<td class="navbuttons" align="center"><button class="blockLink" onclick="location.href='<%=request.getContextPath()%>/jsp/stats.jsp'">Statistics</button></td>
-					</tr>
-				</table>
-			</div>
-		<br><br>
-		<hr>
-		</div>
-		
-		<div class="content">
-		
-		</div>
-	</div>
+<body style="background-color:#FAF3FE">
+<div id="container">
+	<div class="cHeader" id="iHeader">
+		<ul id="mainList">
+        	<li class="mainListItem"><a href="#" class="mainLinkName">Home</a></li>
+            <li class="mainListItem">Students
+            	<ul class="subList">
+                	<li class="subListItem"><a href="#" class="mainLinkName">Get List</a></li>
+                    <li class="subListItem"><a href="#" class="mainLinkName">Add Students</a></li>
+                    <li class="subListItem"><a href="#" class="mainLinkName">Modify Students</a></li>
+                    <li class="subListItem"><a href="#" class="mainLinkName">Delete Students</a></li>
+                </ul>
+            </li>
+            <li class="mainListItem">Examinations
+            	<ul class="subList">
+                	<li class="subListItem"><a href="#" class="mainLinkName">Get List</a></li>
+                    <li class="subListItem"><a href="#" class="mainLinkName">Add New Exam</a></li>
+                    <li class="subListItem"><a href="#" class="mainLinkName">Modify Exam</a></li>
+                    <li class="subListItem"><a href="#" class="mainLinkName">Delete Exam</a></li>
+                </ul>
+            </li>
+            <li class="mainListItem">Leader Board
+            	<ul class="subList">
+                	<li class="subListItem"><a href="#" class="mainLinkName">Get</a></li>
+                    <li class="subListItem"><a href="#" class="mainLinkName">Add</a></li>
+                    <li class="subListItem"><a href="#" class="mainLinkName">Modify</a></li>
+                    <li class="subListItem"><a href="#" class="mainLinkName">Delete</a></li>
+                </ul>
+            </li>
+            <li class="mainListItem">Statistics
+            	<ul class="subList">
+                	<li class="subListItem"><a href="#" class="mainLinkName">Get</a></li>
+                    <li class="subListItem"><a href="#" class="mainLinkName">Add</a></li>
+                    <li class="subListItem"><a href="#" class="mainLinkName">Modify</a></li>
+                    <li class="subListItem"><a href="#" class="mainLinkName">Delete</a></li>
+                </ul>
+            </li>
+        </ul>
+ 	</div>
+	<div class="cBody" id="iBody"></div>
+	<div class="cFooter" id="iFooter"></div>
+</div>
 </body>
 </html>
