@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+function show_sidebar()
+{
+document.getElementById('sidebar').style.display="block";
+}
+
+function hide_sidebar()
+{
+document.getElementById('sidebar').style.display="none";
+}
+</script>
+
+<img src="images/cart.jpg" width="80px" height="30px" onMouseOver="show_sidebar()"     onMouseOut="hide_sidebar()">
+
+<div id="sidebar">some thing</div>
+</body>
+</html>
