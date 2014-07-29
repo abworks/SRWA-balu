@@ -8,19 +8,22 @@
 	width: 100%;
 }
 ul {
-  text-align: left;
-  display: inline;
-  margin: 0;
-  padding: 15px 4px 17px 0;
+  text-align: center;
+  margin:0;
+  padding:0;
   list-style: none;
-  width: 100%;
+  width: 800px;
 }
 ul li {
+  padding-top: 10px;
+  padding-left:0;
+  padding-right:0;
   font: 17px Segoe UI, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
-  display: inline-block;
+  display: table-cell;
   margin-right: -4px;
   position: relative;
-  padding: 15px 5.5%;
+  width:200px;
+  height: 30px;
   background: #C4B8C6;
   cursor: pointer;
 }
@@ -29,32 +32,63 @@ ul li:hover {
   color: #EDE8EE;
 }
 ul li ul {
-  text-align:center;
-  padding: 0;
   position: absolute;
-  top: 53px;
-  left: 0;
-  width: 98%;
-  box-shadow: none;
+  padding:0;
+  top: 100%;
   display: none;
   opacity: 0;
-  visibility: hidden;
+  visibility: hidden; 
+  width: 100%;
+  background-color: #F69D71;
 }
 ul li ul li { 
   background: #F69D71; 
-  display: block; 
+  display: table-row; 
   color: #FCF8FC;
-}
+  margin: 0;
+  padding: 0;
+  border: 0;
+ }
 ul li ul li:hover { 
 	background: #F5C8B2;
 	color: #E95003;
 }
 ul li:hover ul {
-  display: block;
+  display: table-row;
   opacity:1;
   visibility: visible;
 }
 .mainLinkName{
 	text-decoration:none;
 	color:inherit;
+	padding:0;
+}
+.linkDivStudent,.linkDivExam,.linkDivLeader,.linkDivStat{
+	text-align:center;
+	font-size: 14px;
+	padding-top:5px;
+	padding-bottom: 5px;
+	padding-right:0;
+	padding-left:0;
+	margin: 0;
+	border: 0;
+}
+.homeDiv{
+	padding:-20px;
+	margin: 0;
+	border: 0;
+	width: 100%;
+	height: 120%;
+}
+.linkDivStudent{
+	width: 160px;
+}
+.linkDivExam{
+	width: 171px;
+}
+.linkDivLeader{
+	width: 156px;
+}
+.linkDivStat{
+	width: 160px;
 }

@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
@@ -11,42 +11,45 @@
 <div id="container">
 	<div class="cHeader" id="iHeader">
 		<ul id="mainList">
-        	<li class="mainListItem"><a href="#" class="mainLinkName">Home</a></li>
+        	<li class="mainListItem"><a href="#" class="mainLinkName"><div class="homeDiv">Home</div></a></li>
             <li class="mainListItem">Students
             	<ul class="subList">
-                	<li class="subListItem"><a href="#" class="mainLinkName">Get List</a></li>
-                    <li class="subListItem"><a href="#" class="mainLinkName">Add Students</a></li>
-                    <li class="subListItem"><a href="#" class="mainLinkName">Modify Students</a></li>
-                    <li class="subListItem"><a href="#" class="mainLinkName">Delete Students</a></li>
+                	<li class="subListItem"><a target="bodyFrame" href="<%=request.getContextPath() %>/jsp/student_getList.jsp" class="mainLinkName"><div class="linkDivStudent">Search</div></a></li>
+                    <li class="subListItem"><a href="<%=request.getContextPath() %>/jsp/student_add.jsp" class="mainLinkName"><div class="linkDivStudent">Add</div></a></li>
+                    <li class="subListItem"><a href="<%=request.getContextPath() %>/jsp/student_modify.jsp" class="mainLinkName"><div class="linkDivStudent">Update</div></a></li>
+                    <li class="subListItem"><a href="<%=request.getContextPath() %>/jsp/student_delete.jsp" class="mainLinkName"><div class="linkDivStudent">Remove</div></a></li>
                 </ul>
             </li>
             <li class="mainListItem">Examinations
             	<ul class="subList">
-                	<li class="subListItem"><a href="#" class="mainLinkName">Get List</a></li>
-                    <li class="subListItem"><a href="#" class="mainLinkName">Add New Exam</a></li>
-                    <li class="subListItem"><a href="#" class="mainLinkName">Modify Exam</a></li>
-                    <li class="subListItem"><a href="#" class="mainLinkName">Delete Exam</a></li>
+                	<li class="subListItem"><a href="#" class="mainLinkName"><div class="linkDivExam">Search</div></a></li>
+                    <li class="subListItem"><a href="#" class="mainLinkName"><div class="linkDivExam">Add</div></a></li>
+                    <li class="subListItem"><a href="#" class="mainLinkName"><div class="linkDivExam">Modify</div></a></li>
+                    <li class="subListItem"><a href="#" class="mainLinkName"><div class="linkDivExam">Delete</div></a></li>
+                	<li class="subListItem"><a href="#" class="mainLinkName"><div class="linkDivExam">Email</div></a></li>
                 </ul>
             </li>
             <li class="mainListItem">Leader Board
             	<ul class="subList">
-                	<li class="subListItem"><a href="#" class="mainLinkName">Get</a></li>
-                    <li class="subListItem"><a href="#" class="mainLinkName">Add</a></li>
-                    <li class="subListItem"><a href="#" class="mainLinkName">Modify</a></li>
-                    <li class="subListItem"><a href="#" class="mainLinkName">Delete</a></li>
+                	<li class="subListItem"><a href="#" class="mainLinkName"><div class="linkDivLeader">Top</div></a></li>
+                    <!-- <li class="subListItem"><a href="#" class="mainLinkName"><div class="linkDivLeader">Add</div></a></li>
+                    <li class="subListItem"><a href="#" class="mainLinkName"><div class="linkDivLeader">Modify</div></a></li>
+                    <li class="subListItem"><a href="#" class="mainLinkName"><div class="linkDivLeader">Delete</div></a></li> -->
                 </ul>
             </li>
             <li class="mainListItem">Statistics
             	<ul class="subList">
-                	<li class="subListItem"><a href="#" class="mainLinkName">Get</a></li>
-                    <li class="subListItem"><a href="#" class="mainLinkName">Add</a></li>
-                    <li class="subListItem"><a href="#" class="mainLinkName">Modify</a></li>
-                    <li class="subListItem"><a href="#" class="mainLinkName">Delete</a></li>
+                	<li class="subListItem"><a href="#" class="mainLinkName"><div class="linkDivStat">Examination</div></a></li>
+                    <li class="subListItem"><a href="#" class="mainLinkName"><div class="linkDivStat">Student</div></a></li>
+                    <!-- <li class="subListItem"><a href="#" class="mainLinkName"><div class="linkDivStat">Modify</div></a></li>
+                    <li class="subListItem"><a href="#" class="mainLinkName"><div class="linkDivStat">Delete</div></a></li> -->
                 </ul>
             </li>
         </ul>
  	</div>
-	<div class="cBody" id="iBody"></div>
+	<div class="cBody" id="iBody">
+		<iframe width="100%" name="bodyFrame" style="min-height: 79%;" frameBorder="0"></iframe>
+	</div>
 	<div class="cFooter" id="iFooter"></div>
 </div>
 </body>
