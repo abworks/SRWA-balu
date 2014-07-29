@@ -5,43 +5,77 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Student :: Examination Module</title>
-<link rel="stylesheet" type="text/css" href="<%= request.getContextPath() %>/css/commons.css">
-<link rel="stylesheet" type="text/css" href="<%= request.getContextPath() %>/css/student.css">
+<style type="text/css" title="commons">
+body{
+background-color:#F7F1F1;
+}
+.container{
+	
+}
+#formTable{
+	margin: auto;
+	margin-top: 30px;
+}
+#buttonTable{
+	margin: auto;
+}
+.header{
+font-family: Century Gothic;
+font-weight:bold;
+color: #414040;
+font-size: 20px;
+text-align: center;
+margin-top: 20px;
+}
+.requestForm{
+background-color: #6D8F95;
+font-family: open sans;
+color: #D6E1E2;
+font-size: 15px;
+width: 50%;
+margin: auto;
+padding: 30px;
+margin-top: 20px;
+}
+.buttons{
+font-family: open sans;
+color: #FDFAFA;
+font-size: 15px;
+background-color: #276A2D;
+border: 0;
+padding: 5px 20px;
+cursor: pointer;
+}
+.buttons:HOVER{
+font-family: open sans;
+color: #18581E;
+font-size: 15px;
+background-color: #EFE81A;
+border: 0;
+padding: 5px 20px;
+cursor: pointer;
+}
+.select{
+	width: 100%;
+}
+input,.select{
+    border: 2px solid white; 
+    -webkit-box-shadow: 
+      inset 0 0 3px  rgba(0,0,0,0.1),
+            0 0 6px rgba(0,0,0,0.1); 
+    -moz-box-shadow: 
+      inset 0 0 3px  rgba(0,0,0,0.1),
+            0 0 6px rgba(0,0,0,0.1); 
+    box-shadow: 
+      inset 0 0 3px  rgba(0,0,0,0.1),
+            0 0 6px rgba(0,0,0,0.1); 
+    padding: 5px;
+    background: rgba(255,255,255,0.5);
+    margin: 0 0 4px 0;
+}
+</style>
 </head>
 <body>
-	<div class="container">
-		<div class="header" >
-			<div class="logo">
-			<img src="<%=request.getContextPath() %>/icons/logo.png" alt="logo">
-			</div>
-			<div class="nav">
-				<table id="navtable" cellspacing="0" cellpadding="0">
-					<tr>
-						<td class="navbuttons" align="center"><button class="blockLink" onclick="location.href='<%=request.getContextPath()%>/jsp/index.jsp'">Home</button></td>
-						<td class="navbuttons" align="center"><button class="blockLink" onclick="location.href='<%=request.getContextPath()%>/jsp/student.jsp'">Student</button></td>
-						<td class="navbuttons" align="center"><button class="blockLink" onclick="location.href='<%=request.getContextPath()%>/jsp/exam.jsp'">Examinations</button></td>
-						<td class="navbuttons" align="center"><button class="blockLink" onclick="location.href='<%=request.getContextPath()%>/jsp/leader.jsp'">Leader Board</button></td>
-						<td class="navbuttons" align="center"><button class="blockLink" onclick="location.href='<%=request.getContextPath()%>/jsp/stats.jsp'">Statistics</button></td>
-					</tr>
-				</table>
-			</div>
-		<br><br>
-		<hr>
-		</div>
-		<div class="content" align="left">
-			<div id="contentButtons" align="center" style="margin-top: 100px;">
-				<table cellpadding="0">
-					<tr><td><form method="post" action=""><button class="contentBut" type="submit">Get List</button></form></td></tr>
-					<tr><td><form method="post" action=""><button class="contentBut" type="submit">Add</button></form></td></tr>
-					<tr><td><form method="post" action=""><button class="contentBut" type="submit">Modify</button></form></td></tr>
-					<tr><td><form method="post" action=""><button class="contentBut" type="submit">Delete</button></form></td></tr>
-				</table>
-			</div>
-		</div>
-		<div class="options" align="left">
-		</div>
-		<div class="info">
-		</div>
-	</div>
+	
 </body>
 </html>
