@@ -63,7 +63,7 @@ ul li:hover ul {
 	color:inherit;
 	padding:0;
 }
-.linkDivStudent,.linkDivExam,.linkDivLeader,.linkDivStat{
+.linkDivStudent,.linkDivExam,.linkDivLeader,.linkDivStat,.linkDivHome{
 	text-align:center;
 	font-size: 14px;
 	padding-top:5px;
@@ -72,13 +72,6 @@ ul li:hover ul {
 	padding-left:0;
 	margin: 0;
 	border: 0;
-}
-.homeDiv{
-	padding:-20px;
-	margin: 0;
-	border: 0;
-	width: 100%;
-	height: 120%;
 }
 .linkDivStudent{
 	width: 160px;
@@ -91,4 +84,7 @@ ul li:hover ul {
 }
 .linkDivStat{
 	width: 160px;
+}
+.linkDivHome{
+	width: 152px;
 }

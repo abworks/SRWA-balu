@@ -7,11 +7,16 @@
 <title>Home</title>
 <link rel="stylesheet" href="<%=request.getContextPath() %>/css/index.css" type="text/css" />
 </head>
-<body style="background-color:#FAF3FE">
+<body style="background-image:  url('<%=request.getContextPath()%>/backgrounds/SRWM-bi_ps.jpg');">
 <div id="container">
 	<div class="cHeader" id="iHeader">
 		<ul id="mainList">
-        	<li class="mainListItem"><a href="#" class="mainLinkName"><div class="homeDiv">Home</div></a></li>
+        	<li class="mainListItem">home
+	        	<ul>
+	        		<li class="subListItem"><a href="#" class="mainLinkName"><div class="linkDivHome">Home</div></a></li>
+	        		<li class="subListItem"><a href="#" class="mainLinkName"><div class="linkDivHome">School</div></a></li>
+	        	</ul>
+        	</li>
             <li class="mainListItem">Students
             	<ul class="subList">
                 	<li class="subListItem"><a target="bodyFrame" href="<%=request.getContextPath() %>/jsp/student_getList.jsp" class="mainLinkName"><div class="linkDivStudent">Search</div></a></li>
