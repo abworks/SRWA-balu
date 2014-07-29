@@ -1,18 +1,22 @@
 @charset "utf-8";
 /* CSS Document */
+body{
+	margin: 5px;
+}
 #container{
 	width: 70%;
 	margin:0 auto 0 auto;
 }
 .cHeader{
 	width: 100%;
+	position: fixed;
 }
 ul {
   text-align: center;
   margin:0;
   padding:0;
   list-style: none;
-  width: 800px;
+  width: 940px;
 }
 ul li {
   padding-top: 10px;
@@ -74,17 +78,25 @@ ul li:hover ul {
 	border: 0;
 }
 .linkDivStudent{
-	width: 160px;
+	width: 188px;
 }
 .linkDivExam{
-	width: 171px;
+	width: 192px;
 }
 .linkDivLeader{
-	width: 156px;
+	width: 187px;
 }
 .linkDivStat{
-	width: 160px;
+	width: 189px;
 }
 .linkDivHome{
-	width: 152px;
+	width: 185px;
+}
+.cRight{
+	background-color: yellow;
+	float: right;
+}
+.cLeft{
+	background-color: red;
+	float: left;
 }

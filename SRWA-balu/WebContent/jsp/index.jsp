@@ -20,9 +20,9 @@
             <li class="mainListItem">Students
             	<ul class="subList">
                 	<li class="subListItem"><a target="bodyFrame" href="<%=request.getContextPath() %>/jsp/student_getList.jsp" class="mainLinkName"><div class="linkDivStudent">Search</div></a></li>
-                    <li class="subListItem"><a href="<%=request.getContextPath() %>/jsp/student_add.jsp" class="mainLinkName"><div class="linkDivStudent">Add</div></a></li>
-                    <li class="subListItem"><a href="<%=request.getContextPath() %>/jsp/student_modify.jsp" class="mainLinkName"><div class="linkDivStudent">Update</div></a></li>
-                    <li class="subListItem"><a href="<%=request.getContextPath() %>/jsp/student_delete.jsp" class="mainLinkName"><div class="linkDivStudent">Remove</div></a></li>
+                    <li class="subListItem"><a target="bodyFrame" href="<%=request.getContextPath() %>/jsp/student_add.jsp" class="mainLinkName"><div class="linkDivStudent">Add</div></a></li>
+                    <li class="subListItem"><a target="bodyFrame" href="<%=request.getContextPath() %>/jsp/student_modify.jsp" class="mainLinkName"><div class="linkDivStudent">Update</div></a></li>
+                    <li class="subListItem"><a target="bodyFrame" href="<%=request.getContextPath() %>/jsp/student_delete.jsp" class="mainLinkName"><div class="linkDivStudent">Remove</div></a></li>
                 </ul>
             </li>
             <li class="mainListItem">Examinations
@@ -53,9 +53,10 @@
         </ul>
  	</div>
 	<div class="cBody" id="iBody">
-		<iframe width="100%" name="bodyFrame" style="min-height: 79%;" frameBorder="0"></iframe>
+		<iframe width="940px" name="bodyFrame" style="min-height: 79%;margin-top: 50px;" frameBorder="0"></iframe>
 	</div>
-	<div class="cFooter" id="iFooter"></div>
+	<div class="cFooter" id="iFooter">
+	</div>
 </div>
 </body>
 </html>
