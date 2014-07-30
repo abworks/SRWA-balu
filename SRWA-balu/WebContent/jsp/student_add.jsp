@@ -16,9 +16,6 @@ background-color:#F7F1F1;
 	margin: auto;
 	margin-top: 30px;
 }
-#buttonTable{
-	margin: auto;
-}
 .header{
 font-family: Century Gothic;
 font-weight:bold;
@@ -39,22 +36,18 @@ margin-top: 20px;
 height: 300px;
 }
 .buttons{
-font-family: open sans;
-color: #FDFAFA;
-font-size: 15px;
-background-color: #276A2D;
-border: 0;
-padding: 5px 20px;
-cursor: pointer;
+	background: none;
+	background-color: transparent;
+	border-style: none;
+	cursor: pointer;
+	width: 70px;
+	height: 60px;
+	padding: 2px;
 }
-.buttons:HOVER{
-font-family: open sans;
-color: #18581E;
-font-size: 15px;
-background-color: #EFE81A;
-border: 0;
-padding: 5px 20px;
-cursor: pointer;
+.buttons:HOVER {
+	width: 68px;
+	height: 58px;
+	padding: 0;
 }
 .select{
 	width: 100%;
@@ -90,8 +83,8 @@ input,.select{
 		<div class="header">Please provide the necessary details </div>
 		<hr>
 		<div class="requestForm">
-			<div class="manualAdd" style="float: left;">
-				<form action="<%= request.getContextPath() %>/AddStudent" method="post">
+			<form action="<%= request.getContextPath() %>/AddStudent" method="post">
+			<div class="manualAdd" style="width: 250px; background-color: yellow;">
 				<table id="formTable">
 					<tr><td>Class&nbsp;</td><td><input type="text" name="class" required></td></tr>
 					<tr><td>Section&nbsp;</td><td><input type="text" name="section" required></td></tr>
@@ -110,20 +103,16 @@ input,.select{
 											<option value="ST">ST</option>
 											</select></td></tr>
 				</table>
-				<table id="buttonTable">
-					<tr><td><button type="submit" onclick="" class="buttons">Submit</button></td>
-					<td><button type="reset" onclick="" class="buttons">Clear</button></td>
-					<td><button type="button" onclick="" class="buttons">Back</button></td></tr>
-				</table>
-			</form>
 			</div>
-			<div class="browse" style="float: right;">
+			<div class="buttonDiv" style="margin-top: -40px;margin-left: 260px; width: 70px; padding: 2px;"><button type="submit" onclick="" class="buttons"><img src="<%= request.getContextPath() %>/icons/arrow_right.png" alt="Submit"></button></div>
+			</form>
+			<div class="browse" style="margin-top: -260px; background-color: red;">
 			If you want to upload all the student details using excel sheet, Please upload the file here<br>
 			<hr>
 			<br>
 			<form action="<%= request.getContextPath() %>/AddStudent" method="post">
-				<input type="file" style="border:none;width: 85px; padding: 0; cursor: pointer;" onchange="this.style.width = '100%';" name="Upload" id="selectFile" accept="application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"/>
-				<br><input type="button" class="buttons" value="Submit"/>
+				<input type="file" style="border:none;width: 85px; padding: 0; cursor: pointer; margin-left: 30px; max-width: 300px;" onchange="this.style.width = '100%';" name="Upload" id="selectFile" accept="application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"/>
+				<div id="browseSubmitButton" style="width: 60px; float: right; margin-right: 150px;margin-top: -20px;"><button type="submit" onclick="" class="buttons"><img src="<%= request.getContextPath() %>/icons/arrow_right.png" alt="Submit"></button></div>
 			</form>
 			</div>
 		</div>	

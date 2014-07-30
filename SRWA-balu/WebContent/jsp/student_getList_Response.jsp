@@ -10,12 +10,45 @@
 <style type="text/css">
 body{
 background-color:#F7F1F1;
+margin: 0;
+}
+#query{
+	background-color: #A09EAB;
+	width: 99.5%;
+	height: 60px;
+	border: 2px solid #686770;
+	/*border-bottom: 2px solid #686770;*/
+	margin: auto;
+}
+.buttons{
+	background: none;
+	background-color: transparent;
+	border-style: none;
+	cursor: pointer;
+	width: 70px;
+	height: 60px;
+	padding: 2px;
+}
+.buttons:HOVER {
+	width: 68px;
+	height: 58px;
+	padding: 0;
+}
+#formTableDiv{
+ width: 90%;
+ float: left;
+}
+#buttonDiv{
+	float: right;
+	width: 10%;
+	margin-top: 0;
 }
 </style>
 </head>
 <body>
 	<div id="query">
-		<form action="">
+		<form action="<%= request.getContextPath() %>/GetListServ" method="post">
+		<div id="formTableDiv">
 			<table>
 				<tr>
 					<td>Class</td>
@@ -24,7 +57,6 @@ background-color:#F7F1F1;
 					<td>Roll No</td>
 					<td>Gender</td>
 					<td>Caste</td>
-					<td></td>
 				</tr>
 				<tr>
 					<td><input type="text" name="class" value="ALL"></td>
@@ -43,9 +75,10 @@ background-color:#F7F1F1;
 											<option value="SC">SC</option>
 											<option value="ST">ST</option>
 											</select></td>
-					<td><button type="submit" onclick="" class="buttons">Search</button></td>
 				</tr>
 			</table>
+			</div>
+			<div id="buttonDiv"><button type="submit" onclick="" class="buttons"><img src="<%= request.getContextPath() %>/icons/arrow_right-ring.png" alt="Submit"></button></div>
 		</form>
 	</div>
 	<div id="listDiv">

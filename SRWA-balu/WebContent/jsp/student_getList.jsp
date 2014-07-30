@@ -18,9 +18,6 @@ background-color:#F7F1F1;
 	margin: auto;
 	margin-top: 30px;
 }
-#buttonTable{
-	margin: auto;
-}
 .header{
 font-family: Century Gothic;
 font-weight:bold;
@@ -40,25 +37,26 @@ padding: 30px;
 margin-top: 20px;
 }
 .buttons{
-font-family: open sans;
-color: #FDFAFA;
-font-size: 15px;
-background-color: #276A2D;
-border: 0;
-padding: 5px 20px;
-cursor: pointer;
+	background: none;
+	background-color: transparent;
+	border-style: none;
+	cursor: pointer;
+	width: 70px;
+	height: 60px;
+	padding: 2px;
 }
-.buttons:HOVER{
-font-family: open sans;
-color: #18581E;
-font-size: 15px;
-background-color: #EFE81A;
-border: 0;
-padding: 5px 20px;
-cursor: pointer;
+.buttons:HOVER {
+	width: 68px;
+	height: 58px;
+	padding: 0;
 }
 .select{
 	width: 100%;
+}
+#buttonDiv{
+	float: right;
+	margin-top: -55px;
+	margin-right: 40px;
 }
 input,.select{
     border: 2px solid white; 
@@ -101,9 +99,7 @@ input,.select{
 											<option value="ST">ST</option>
 											</select></td></tr>
 				</table>
-				<table id="buttonTable">
-					<tr><td><button type="submit" onclick="" class="buttons">Search</button></td></tr>
-				</table>
+				<div id="buttonDiv"><button type="submit" onclick="" class="buttons"><img src="<%= request.getContextPath() %>/icons/arrow_right.png" alt="Submit"></button></div>
 			</form>
 		</div>	
 	</div>
