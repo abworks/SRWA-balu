@@ -12,74 +12,72 @@ body{
 background-color:#F7F1F1;
 margin: 0;
 }
-#query{
-	background-color: #A09EAB;
-	width: 99.5%;
-	height: 60px;
-	border: 2px solid #686770;
-	/*border-bottom: 2px solid #686770;*/
-	margin: auto;
-}
 .buttons{
 	background: none;
 	background-color: transparent;
 	border-style: none;
 	cursor: pointer;
-	width: 70px;
-	height: 60px;
-	padding: 2px;
+	padding: 0;
+	border: 0;
 }
 .buttons:HOVER {
-	width: 68px;
-	height: 58px;
-	padding: 0;
+	padding: 0.5px;
 }
-#formTableDiv{
- width: 90%;
- float: left;
+#header{
+width: 100%;
+height: 33px;
 }
-#buttonDiv{
-	float: right;
-	width: 10%;
-	margin-top: 0;
+#query{
+	background-color: #F77272;
+	width: 100%;
+	height: 33px;
+	margin: auto;
+}
+#optDiv{
+  display: none;
+  background-color: yellow;
+  opacity: 1;
+}
+#header:hover #optDiv{
+  display: block;
+  opacity: 1;
 }
 </style>
 </head>
 <body>
-	<div id="query">
+	<div id="header">
+		<div id="query">
 		<form action="<%= request.getContextPath() %>/GetListServ" method="post">
-		<div id="formTableDiv">
-			<table>
-				<tr>
-					<td>Class</td>
-					<td>Section</td>
-					<td>Name</td>
-					<td>Roll No</td>
-					<td>Gender</td>
-					<td>Caste</td>
-				</tr>
-				<tr>
-					<td><input type="text" name="class" value="ALL"></td>
-					<td><input type="text" name="section" value="ALL"></td>
-					<td><input type="text" name="studentName" value="ALL"></td>
-					<td><input type="text" name="rollNo" value="ALL"></td>
-					<td><select class="select" name="gender">
-												<option value="ALL">--All--</option>
-												<option value="MALE">MALE</option>
-												<option value="FEMALE">FEMALE</option>
-											</select></td>
-					<td><select class="select" name="caste">
-											<option value="ALL">--All--</option>
-											<option value="OC">OC</option>
-											<option value="OBC">OBC</option>
-											<option value="SC">SC</option>
-											<option value="ST">ST</option>
-											</select></td>
-				</tr>
-			</table>
+			<div id="formTableDiv">
+				<div id="actTable" style="font-family: segoe ui;text-align: center; float: left;">
+					<table style="">
+						<tr>
+							<td><input type="text" name="class" placeholder="class"></td>
+							<td><input type="text" name="section" placeholder="section"></td>
+							<td><input type="text" name="studentName" placeholder="student name"></td>
+							<td><input type="text" name="rollNo" placeholder="roll no"></td>
+							<td><select class="select" name="gender">
+														<option value="MALE">MALE</option>
+														<option value="FEMALE">FEMALE</option>
+													</select></td>
+							<td><select class="select" name="caste">
+													<option value="OC">OC</option>
+													<option value="OBC">OBC</option>
+													<option value="SC">SC</option>
+													<option value="ST">ST</option>
+													</select></td>
+						</tr>
+					</table>
+				</div>
+			<div id="buttonDiv" style="float: right;"><button type="submit" onclick="" class="buttons"><img src="<%= request.getContextPath() %>/icons/right-arrow.png" alt="Submit"></button></div>
 			</div>
-			<div id="buttonDiv"><button type="submit" onclick="" class="buttons"><img src="<%= request.getContextPath() %>/icons/arrow_right-ring.png" alt="Submit"></button></div>
 		</form>
+		</div>
+		<!-- <div id="optDiv">
+						<table style="font-family: segoe ui;text-align: center;">
+						<tr><td>Class</td><td>Section</td><td>Name</td><td>Roll No</td><td>Gender</td><td>Caste</td></tr>
+						</table>
+		</div> -->
 	</div>
 	<div id="listDiv">
 		<%

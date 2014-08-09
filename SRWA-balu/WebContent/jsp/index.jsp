@@ -7,7 +7,7 @@
 <title>Home</title>
 <link rel="stylesheet" href="<%=request.getContextPath() %>/css/index.css" type="text/css" />
 </head>
-<body style="background-image:  url('<%=request.getContextPath()%>/backgrounds/SRWM-bi_ps.jpg');">
+<body style="background-color: #5C5555;">
 <div id="container">
 	<div class="cHeader" id="iHeader">
 		<ul id="mainList">
@@ -53,7 +53,7 @@
         </ul>
  	</div>
 	<div class="cBody" id="iBody">
-		<iframe width="940px" name="bodyFrame" style="min-height: 79%;margin-top: 50px;" frameBorder="0"></iframe>
+		<iframe width="940px" name="bodyFrame" style="min-height: 80%;margin-top: 50px;" frameBorder="0"></iframe>
 	</div>
 	<div class="cFooter" id="iFooter">
 	</div>
