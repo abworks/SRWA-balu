@@ -7,6 +7,5 @@ public class Constants {
 	public static String PASS = "balu";
 	
 	public static String GET_ALL_STUDENTS = "SELECT * FROM students";
-	public static String GET_ALL_STUDENTS_SUG = "SELECT * FROM students WHERE name LIKE ";
 	public static String INSERT_STUDENT = "INSERT INTO students VALUES(?,?,?,?,?,?)";
 }

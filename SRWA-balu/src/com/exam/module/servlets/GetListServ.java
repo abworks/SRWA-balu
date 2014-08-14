@@ -25,13 +25,21 @@ public class GetListServ extends HttpServlet {
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		ArrayList<Object[]> queryParams = new ArrayList<Object[]>();
-		queryParams.add(new Object[]{"class",request.getParameter("class")});
-		queryParams.add(new Object[]{"section",request.getParameter("section")});
-		queryParams.add(new Object[]{"roll",request.getParameter("rollNo")});
-		queryParams.add(new Object[]{"gender",request.getParameter("gender")});
-		queryParams.add(new Object[]{"name",request.getParameter("studentName")});
-		queryParams.add(new Object[]{"caste",request.getParameter("caste")});
+		ArrayList<String[]> queryParams = new ArrayList<String[]>();
+		/*System.out.println("class"+ request.getParameter("class"));
+		System.out.println("section"+ request.getParameter("section"));
+		System.out.println("name"+ request.getParameter("studentName"));
+		System.out.println("roll"+ request.getParameter("rollNo"));
+		System.out.println("gender "+ request.getParameter("gender"));
+		System.out.println("caste "+ request.getParameter("caste"));
+		*/
+		//System.out.println("Class of this "+ request.getParameter("class").getClass());
+		queryParams.add(new String[]{"class",request.getParameter("class")});
+		queryParams.add(new String[]{"section",request.getParameter("section")});
+		queryParams.add(new String[]{"roll",request.getParameter("rollNo")});
+		queryParams.add(new String[]{"name",request.getParameter("studentName")});
+		queryParams.add(new String[]{"gender",request.getParameter("gender")});
+		queryParams.add(new String[]{"caste",request.getParameter("caste")});
 		
 		String sugName = request.getParameter("studentName");
 		try {

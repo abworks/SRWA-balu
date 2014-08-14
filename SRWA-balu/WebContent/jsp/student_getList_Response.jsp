@@ -57,10 +57,12 @@ height: 33px;
 							<td><input type="text" name="studentName" placeholder="student name"></td>
 							<td><input type="text" name="rollNo" placeholder="roll no"></td>
 							<td><select class="select" name="gender">
+														<option value="" disabled selected style="display: none;">gender</option>
 														<option value="MALE">MALE</option>
 														<option value="FEMALE">FEMALE</option>
 													</select></td>
 							<td><select class="select" name="caste">
+													<option value="" disabled selected style="display: none;">caste</option>
 													<option value="OC">OC</option>
 													<option value="OBC">OBC</option>
 													<option value="SC">SC</option>

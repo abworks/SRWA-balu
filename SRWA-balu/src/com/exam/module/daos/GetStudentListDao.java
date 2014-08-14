@@ -11,7 +11,7 @@ import com.exam.module.utils.Constants;
 
 
 public class GetStudentListDao {
-	public ArrayList<StudentPojo> getStudentList(ArrayList<Object[]> queryParams) throws Exception{
+	public ArrayList<StudentPojo> getStudentList(ArrayList<String[]> queryParams) throws Exception{
 		ArrayList<StudentPojo> arrStudent = new ArrayList<StudentPojo>();
 		Connection connection = ConnectionManager.getConnection();
 		String query = queryBuilder(queryParams);
@@ -32,12 +32,14 @@ public class GetStudentListDao {
 		return arrStudent;
 	}
 	
-	private static String queryBuilder(ArrayList<Object[]> queryParams){
+	private static String queryBuilder(ArrayList<String[]> queryParams){
 		String query = Constants.GET_ALL_STUDENTS;
 		String buildQuery = "";
 		int count = 0;
-		for(Object[] i : queryParams){
-			if(i[1].equals("ALL"))
+		for(String[] i : queryParams){
+			if(i[1] == null)
+				count++;
+			else if(i[1].equals(""))
 				count++;
 		}
 		
@@ -47,30 +49,41 @@ public class GetStudentListDao {
 		}
 		
 		buildQuery = Constants.GET_ALL_STUDENTS + " WHERE ";
-		for(int i = 0; i<queryParams.size()-1; i++){
-			if(!queryParams.get(i)[1].equals("ALL") && queryParams.get(i)[1] instanceof Integer){
-				buildQuery += queryParams.get(i)[0] + " = " + queryParams.get(i)[1] + " AND ";
+		for(int i = 0; i < 4; i++){
+			Object value;
+			//System.out.println(i + "->" + queryParams.get(i)[1].toString());
+			try{
+				value = Integer.parseInt(queryParams.get(i)[1]);
+			}catch(Exception e){
+				value = queryParams.get(i)[1];
 			}
-			if(!queryParams.get(i)[1].equals("ALL") && queryParams.get(i)[1] instanceof String){
+			if(!queryParams.get(i)[1].equals("") && value instanceof Integer)
+				buildQuery += queryParams.get(i)[0] + " = " + queryParams.get(i)[1] + " AND ";
+			if(!queryParams.get(i)[1].equals("") && value instanceof String){
 				buildQuery += queryParams.get(i)[0] + " = '" + queryParams.get(i)[1] + "' AND ";
 			}
 		}
-		if(!queryParams.get(queryParams.size()-1)[1].equals("ALL"))
-			buildQuery += queryParams.get(queryParams.size()-1)[0] + " = '" + queryParams.get(queryParams.size()-1)[1] + "'";
-		if(queryParams.get(queryParams.size()-1)[1].equals("ALL"))
+		if(queryParams.get(4)[1] != null)
+			buildQuery += queryParams.get(4)[0] + " = '" + queryParams.get(4)[1] + "' AND ";
+		if(queryParams.get(5)[1] != null)
+			buildQuery += queryParams.get(5)[0] + " = '" + queryParams.get(5)[1] + "'";
+		else
 			buildQuery = buildQuery.substring(0, buildQuery.length()-5);
 		return buildQuery;
 	}
 	
-	public ArrayList<StudentPojo> getStudentList(String queryParams) throws Exception{
-		//System.out.println("queryPAram " + queryParams);
-		if(queryParams.equals(""))
-		return null;
-		
+	public ArrayList<StudentPojo> getStudentList(String queryParam) throws Exception{
+		//System.out.println("queryPAram " + queryParams)
+		if(queryParam.equals(""))
+			return null;
 		ArrayList<StudentPojo> arrStudent = new ArrayList<StudentPojo>();
 		Connection connection = ConnectionManager.getConnection();
-		String query = Constants.GET_ALL_STUDENTS_SUG;
-		query += " '%" + queryParams + "%'";
+		String query = Constants.GET_ALL_STUDENTS;
+		if(!queryParam.equals("")){
+			query += " WHERE name LIKE ";
+			query += " '%" + queryParam + "%'";
+		}
+		//System.out.println(query);
 		PreparedStatement statement = connection.prepareStatement(query);
 		ResultSet resultSet = statement.executeQuery();
 		while(resultSet.next()){
