@@ -9,6 +9,7 @@ public class GetListStudentsService {
 		ArrayList<StudentPojo> newSugList = new ArrayList<StudentPojo>();
 		if(arrStudent.size() == 0)
 			return arrSugStudent;
+		if(arrSugStudent != null){
 		if(arrStudent.size() == arrSugStudent.size()){
 			int arrStudentSize = arrStudent.size();
 			int count = 0;
@@ -29,6 +30,7 @@ public class GetListStudentsService {
 					arrSugStudent.remove(i);
 				}
 			}
+		}
 		}
 		//return newSugList;
 		return arrSugStudent;

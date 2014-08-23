@@ -19,7 +19,7 @@
         	</li>
             <li class="mainListItem">Students
             	<ul class="subList">
-                	<li class="subListItem"><a target="bodyFrame" href="<%=request.getContextPath() %>/jsp/student_getList_Response.jsp" class="mainLinkName"><div class="linkDivStudent">Search</div></a></li>
+                	<li class="subListItem"><a target="bodyFrame" href="<%=request.getContextPath() %>/jsp/student_getList.jsp" class="mainLinkName"><div class="linkDivStudent">Search</div></a></li>
                     <li class="subListItem"><a target="bodyFrame" href="<%=request.getContextPath() %>/jsp/student_add.jsp" class="mainLinkName"><div class="linkDivStudent">Add</div></a></li>
                     <li class="subListItem"><a target="bodyFrame" href="<%=request.getContextPath() %>/jsp/student_modify.jsp" class="mainLinkName"><div class="linkDivStudent">Modify</div></a></li>
                     <li class="subListItem"><a target="bodyFrame" href="<%=request.getContextPath() %>/jsp/student_delete.jsp" class="mainLinkName"><div class="linkDivStudent">Remove</div></a></li>

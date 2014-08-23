@@ -51,7 +51,7 @@ public class GetListServ extends HttpServlet {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		request.getRequestDispatcher("jsp/student_getList_Response.jsp").forward(request, response);
+		request.getRequestDispatcher("jsp/student_getList.jsp").forward(request, response);
 	}
 
 }
