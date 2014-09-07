@@ -69,12 +69,32 @@ input,.select{
 }
 .browse{
 	margin-top: 30px;
+	float:right;
 	width: 340px;
 	height: 200px;
 	background-color: #FBFAD6; 
 	color: #575632;
 	padding: 20px 20px;
 	border-style: inset;
+}
+#selectFile{
+	cursor: pointer;
+}
+.fileUpload {
+	position: relative;
+	overflow: hidden;
+	margin: 10px;
+}
+.fileUpload input.upload {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 0;
+	padding: 0;
+	font-size: 20px;
+	cursor: pointer;
+	opacity: 0;
+	filter: alpha(opacity=0);
 }
 </style>
 </head>
@@ -84,7 +104,7 @@ input,.select{
 		<hr>
 		<div class="requestForm">
 			<form action="<%= request.getContextPath() %>/AddStudent" method="post">
-			<div class="manualAdd" style="width: 250px; background-color: yellow;">
+			<div class="manualAdd" style="width: 250px;">
 				<table id="formTable">
 					<tr><td>Class&nbsp;</td><td><input type="text" name="class" required></td></tr>
 					<tr><td>Section&nbsp;</td><td><input type="text" name="section" required></td></tr>
@@ -104,9 +124,9 @@ input,.select{
 											</select></td></tr>
 				</table>
 			</div>
-			<div class="buttonDiv" style="margin-top: -40px;margin-left: 260px; width: 70px; padding: 2px;"><button type="submit" onclick="" class="buttons"><img src="<%= request.getContextPath() %>/icons/arrow_right.png" alt="Submit"></button></div>
+			<div class="buttonDiv" style="margin-top: -50px;margin-left: 260px; width:50px;height: 50px;"><button type="submit" onclick="" class="buttons"><img src="<%= request.getContextPath() %>/icons/arrow_right.png" alt="Submit"></button></div>
 			</form>
-			<div class="browse" style="margin-top: -260px; background-color: red;">
+			<div class="browse" style="margin-top: -260px;">
 			If you want to upload all the student details using excel sheet, Please upload the file here<br>
 			<hr>
 			<br>

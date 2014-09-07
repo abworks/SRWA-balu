@@ -14,7 +14,6 @@ margin: 0;
 }
 #container{
 	width: 100%;
-	height: 768px;
 }
 .buttons{
 	background: none;
@@ -38,23 +37,39 @@ position: fixed;
 }
 #mainTabDiv{
 	width: 100%;
+	padding: 0;
 }
 #sugTabDiv{
 	width: 100%;
 }
 #mainTab{
 	width: 100%;
+	padding: 0;
 }
 #sugTab{
 	width: 100%;
 }
-#headerRow{
-	position: fixed;
+th{
+	padding: 0;
 }
-#headerRow td{
-	padding: 20px;
+.tabHeadingClass,.tabDataClass{
+	padding: 0 10px;
+	background-color: yellow;
 }
-.dataRow{
+.tabHeadingSection,.tabDataSection{
+	padding: 0 10px;
+}
+.tabHeadingRoll,.tabDataRoll{
+	padding: 0 10px;
+}
+.tabHeadingName,.tabDataName{
+	padding: 0 70px;
+}
+.tabHeadingGender,.tabDataGender{
+	padding: 0 20px;
+}
+.tabHeadingCaste,.tabDataCaste{
+	padding: 0 20px;
 }
 </style>
 </head>
@@ -85,7 +100,7 @@ position: fixed;
 						</tr>
 					</table>
 				</div>
-			<div id="buttonDiv" style="float: right;"><button type="submit" onclick="" class="buttons"><img src="<%= request.getContextPath() %>/icons/right-arrow.png" alt="Submit"></button></div>
+			<div id="buttonDiv" style="float: right; height: 35px;width: 35px;"><button type="submit" onclick="" class="buttons"><img src="<%= request.getContextPath() %>/icons/right-arrow.png" alt="Submit"></button></div>
 			</div>
 		</form>
 	</div>
@@ -95,16 +110,16 @@ position: fixed;
 		<%
 				ArrayList<StudentPojo> listTotalStudents = (ArrayList<StudentPojo>)request.getSession().getAttribute("ListTotalStudents");
 				if(listTotalStudents != null){
-					out.println("<tr id='headerRow'><th>Class</th><th>Section</th><th>Roll#</th><th>Name</th><th>Gender</th><th>Caste</th></tr>");
-					out.println("<tr></tr>zz");
+					out.println("<tr id='headerRow' style='background-color:#F77272;width:100%;position:fixed;'><th class='tabHeadingClass'>Class</th><th class='tabHeadingSection'>Section</th><th class='tabHeadingRoll'>Roll#</th><th class='tabHeadingName'>Name</th><th class='tabHeadingGender'>Gender</th><th class='tabHeadingCaste'>Caste</th></tr>");
+					out.println("<tr><td><br></td></tr>");
 					for(StudentPojo pojo : listTotalStudents){
 						out.println("<tr class='dataRow'>");
-						out.println("<td>" + pojo.getIntStudentClass() + "</td>");
-						out.println("<td>" + pojo.getStrStudentSection() + "</td>");
-						out.println("<td>" + pojo.getIntStudentRoll() + "</td>");
-						out.println("<td>" + pojo.getStrStudentName() + "</td>");
-						out.println("<td>" + pojo.getStrStudentGender() + "</td>");
-						out.println("<td>" + pojo.getStrStudentCaste() + "</td>");
+						out.println("<td class='tabDataClass'>" + pojo.getIntStudentClass() + "</td>");
+						out.println("<td class='tabDataSection'>" + pojo.getStrStudentSection() + "</td>");
+						out.println("<td class='tabDataRoll'>" + pojo.getIntStudentRoll() + "</td>");
+						out.println("<td class='tabDataName'>" + pojo.getStrStudentName() + "</td>");
+						out.println("<td class='tabDataGender'>" + pojo.getStrStudentGender() + "</td>");
+						out.println("<td class='tabDataCaste'>" + pojo.getStrStudentCaste() + "</td>");
 						out.println("</tr>");
 					}
 				}
